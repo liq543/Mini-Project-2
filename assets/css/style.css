@@ -1,14 +1,33 @@
 /* Color scheme variables */
 :root {
-  --main-color: #ffc600;
-  --secondary-color: #1a1a1a;
-  --highlight-color: #ff6b6b;
+  --main-color: #9b5de5;
+  --secondary-color: #f15bb5;
+  --highlight-color: #fee440;
+  --text-color: #ffffff;
 }
 
 body {
   /* Linear gradient background */
   background: linear-gradient(45deg, var(--main-color), var(--secondary-color));
-  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--text-color);
+  height: 100vh;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+}
+
+header p {
+  font-size: 1.2em;
 }
 
 .snippets-container {
@@ -16,12 +35,11 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 20px;
-  transition: all 0.5s ease; /* Animation */
 }
 
 .snippet {
-  background: var(--secondary-color);
-  color: var(--main-color);
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border: 1px solid var(--highlight-color); /* Neon border */
   border-radius: 5px;
   margin: 10px;
   padding: 20px;
@@ -30,11 +48,18 @@ body {
 }
 
 .snippet:hover {
-  background: var(--highlight-color);
+  border-color: var(--text-color);
+  box-shadow: 0 0 10px var(--highlight-color);
+}
+
+.snippet h2, .snippet pre {
+  margin: 0;
 }
 
 .snippet pre {
   user-select: all; /* User can select the whole text by clicking on it */
+  white-space: pre-wrap; /* Allows the text to wrap */
+  word-wrap: break-word; /* Breaks the word at the end of line */
 }
 
 /* Media queries for responsive design */

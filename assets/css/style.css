@@ -1,51 +1,72 @@
+/* Media queries to make 3 cards across on laptop, 2-across on tablet and 1 single-column on mobile */
+/* use variables for color schemes */
+/* some animation included */
+
+/* styles.css */
 
 :root {
-    --main-color: #ffc600;
-    --secondary-color: #1a1a1a;
-    --highlight-color: #ff6b6b;
-}
-
-body {
-    
-    background: linear-gradient(45deg, var(--main-color), var(--secondary-color));
-    font-family: Arial, sans-serif;
-}
-
-.snippets-container {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+  }
+  
+  header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    color: #fff;
+  }
+  
+  main {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20px;
     padding: 20px;
-    transition: all 0.5s ease; 
-}
-
-.snippet {
-    background: var(--secondary-color);
-    color: var(--main-color);
+  }
+  
+  .snippet {
+    background-color: #fff;
+    padding: 20px;
     border-radius: 5px;
-    margin: 10px;
-    padding: 20px;
-    width: calc((100% - 60px) / 3);
-    transition: all 0.5s ease; 
-}
-
-.snippet:hover {
-    background: var(--highlight-color);
-}
-
-.snippet pre {
-    user-select: all; 
-}
-
-
-@media (max-width: 992px) {
-    .snippet {
-        width: calc((100% - 40px) / 2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .snippet:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  pre {
+    margin: 0;
+    white-space: pre-wrap;
+  }
+  
+  code {
+    font-family: Consolas, monospace;
+    font-size: 14px;
+  }
+  
+  /* Media Queries */
+  
+  @media screen and (max-width: 600px) {
+    main {
+      padding: 10px;
     }
-}
-
-@media (max-width: 768px) {
+  
     .snippet {
-        width: calc(100% - 20px);
+      flex-basis: 100%;
     }
-}
+  }
+  
+  

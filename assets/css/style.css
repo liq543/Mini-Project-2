@@ -1,0 +1,51 @@
+
+:root {
+    --main-color: #ffc600;
+    --secondary-color: #1a1a1a;
+    --highlight-color: #ff6b6b;
+}
+
+body {
+    
+    background: linear-gradient(45deg, var(--main-color), var(--secondary-color));
+    font-family: Arial, sans-serif;
+}
+
+.snippets-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    transition: all 0.5s ease; 
+}
+
+.snippet {
+    background: var(--secondary-color);
+    color: var(--main-color);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    width: calc((100% - 60px) / 3);
+    transition: all 0.5s ease; 
+}
+
+.snippet:hover {
+    background: var(--highlight-color);
+}
+
+.snippet pre {
+    user-select: all; 
+}
+
+
+@media (max-width: 992px) {
+    .snippet {
+        width: calc((100% - 40px) / 2);
+    }
+}
+
+@media (max-width: 768px) {
+    .snippet {
+        width: calc(100% - 20px);
+    }
+}

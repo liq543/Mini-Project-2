@@ -15,27 +15,69 @@
       <section class="snippets-container">
           <div class="snippet">
               <h2>Flexbox Row</h2>
-              <pre>.flex-row { display: flex; flex-direction: row; }</pre>
+              <pre><code>
+.container {
+  display: flex;
+  flex-direction: row;
+}
+                </code></pre>
           </div>
           <div class="snippet">
               <h2>Flexbox Column</h2>
-              <pre>.flex-column { display: flex; flex-direction: column; }</pre>
+              <pre><code>
+                .container {
+                    display: flex;
+                    flex-direction: column;
+                }
+                </code></pre>
           </div>
           <div class="snippet">
               <h2>CSS Grid Layout</h2>
-              <pre>.grid { display: grid; grid-template-columns: repeat(3, 1fr); }</pre>
+              <pre><code>
+                .container {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 10px;
+                }
+                </code></pre>
           </div>
           <div class="snippet">
               <h2>Linear Gradients</h2>
-              <pre>background: linear-gradient(45deg, red, blue);</pre>
+              <pre><code>
+                .container {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 10px;
+                }
+                </code></pre>
           </div>
           <div class="snippet">
               <h2>Box Transition Glow</h2>
-              <pre>.glow { transition: 0.5s; } .glow:hover { box-shadow: 0 0 10px #09f; }</pre>
+              <pre><code>
+                .box {
+                    transition: all 0.5s ease;
+                }
+                .box:hover {
+                    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+                }
+                </code></pre>
           </div>
           <div class="snippet">
               <h2>Overlay Card</h2>
-              <pre>.overlay { position: relative; } .overlay::after { content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0,0,0,0.5); }</pre>
+              <pre><code>
+                .overlay-card {
+                    position: relative;
+                }
+                .overlay-card::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0,0,0,0.5);
+                }
+                </code></pre>
           </div>
       </section>
   </main>

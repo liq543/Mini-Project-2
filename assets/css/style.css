@@ -60,6 +60,12 @@ header p {
   user-select: all; /* User can select the whole text by clicking on it */
   white-space: pre-wrap; /* Allows the text to wrap */
   word-wrap: break-word; /* Breaks the word at the end of line */
+  font-family: 'Courier New', monospace; /* This is a common monospace font */
+  font-size: 16px; /* Adjust as needed */
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
 }
 
 /* Media queries for responsive design */

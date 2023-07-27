@@ -2,11 +2,90 @@
 /* use variables for color schemes */
 /* some animation included */
 
+.is-size-1 {
+  margin-top: 50px;
+}
+
+/* html { */
+  /* height: 100%; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .centered-content {
+  max-width: 100px;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+} */
+
+.main-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.under-nav {
+  /* display: flex;
+  justify-content: center; Center the content horizontally */
+  /* align-items: center; /* Center the content vertically */
+  /* flex-direction: column;
+  max-width: 100%;
+  overflow: hidden; */ 
+  /* height: 50vh; Use viewport height to make the section fill the screen */
+}
+
+/* .centered-content {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+} */
+
+/* .image-container {
+  display: flex;
+  align-content: flex-end;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+} */
+
+    .vectorsolar {
+      height: 500px;
+    }
+
+    .image-container h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgb(0, 0, 0);
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .image-container h2 {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgb(0, 0, 0);
+      text-align: center;
+      font-size: 30px;
+    }    
+
+
+
 /* styles.css */
 
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
+    --primary-color: #ffffff;
+    --secondary-color: #6c757d00;
     --background-color: #f8f9fa;
   }
   
@@ -14,18 +93,98 @@
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
+    font-family: ui-sans-serif,system-ui,Helvetica,Arial,sans-serif
   }
   
   header {
     background-color: var(--primary-color);
     padding: 20px;
     text-align: center;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
   }
   
   header h1 {
     color: #fff;
   }
   
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: var(--secondary-color);
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav h1 {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #000000;
+  }
+
+nav img {
+  height: 40px;
+  padding-right: 20px;
+}
+
+#test {
+    /* text-align: center; */
+}
+
+.cardhomepage #homeimg1 {
+  /* display: flex;
+  justify-content: end; */
+}
+
+#homeimg1 {
+  /* height: 500px; */
+  /* display: flex;
+  justify-content: center; */
+}
+
+.sectionhome1 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+/* .imghome {
+  height: 500px;
+  justify-content: end;
+} */
+
+.imghead {
+  /* align-items: center; */
+  text-align: end;  
+  /* height: 500px; */
+  /* justify-content: end; */
+}
+
+.cardhomepage {
+  text-align: center;
+}
+
   main {
     display: flex;
     flex-wrap: wrap;
@@ -68,5 +227,6 @@
       flex-basis: 100%;
     }
   }
+  
   
   
